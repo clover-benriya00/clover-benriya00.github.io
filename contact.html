@@ -18,7 +18,7 @@
   <div class="head">
     <a class="brand" href="index.html"><span class="logo-icon">☘</span><span class="brand-name">株式会社Clover<small>便利屋・清掃サービス｜全国対応</small></span></a>
     <nav class="nav" id="nav"><a href="index.html">ホーム</a><a href="service.html">サービス</a><a href="price.html">料金</a><a href="works.html">施工事例</a><a href="company.html">会社概要</a><a href="contact.html" class="current">お問い合わせ</a></nav>
-    <a class="head-cta" href="https://lin.ee/Qf1n48V" target="_blank" rel="noopener">LINEで無料相談</a>
+    <a class="head-cta" href="contact.html#form">無料見積りフォーム</a>
     <button class="menu-btn" type="button" aria-label="メニューを開く" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
   </div>
 </header>
@@ -31,8 +31,63 @@
 </section>
 <section class="section">
   <div class="container">
-    <div class="contact-grid">
-      <a class="contact-card line" href="https://lin.ee/Qf1n48V" target="_blank" rel="noopener"><small>お気軽にどうぞ</small><span class="big">💬 LINEで無料相談</span></a>
+
+    <!-- ===== メールフォーム =====
+         送信された内容は、下の action に書いたメールアドレスに届きます。
+         受け取るアドレスを変えるときは「clover.chigasaki@gmail.com」の部分を書き換えてください。
+         送信後に表示するページは _next の値（thanks.html のURL）です。 -->
+    <form class="contact-form" id="form" action="https://formsubmit.co/clover.chigasaki@gmail.com" method="POST">
+      <h2>メールフォーム</h2>
+      <p class="form-lead">下記をご入力のうえ「送信する」を押してください。担当者よりメールでご連絡いたします。</p>
+
+      <input type="hidden" name="_subject" value="【ホームページ】お問い合わせが届きました">
+      <input type="hidden" name="_next" value="https://clover-benriya00.github.io/thanks.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- 迷惑メール対策：人には見えない欄。ここに入力があると送信されません -->
+      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+
+      <div class="field">
+        <label for="f-name">お名前<span class="req">必須</span></label>
+        <input id="f-name" type="text" name="お名前" required placeholder="例：茅ヶ崎 太郎">
+      </div>
+      <div class="field">
+        <label for="f-email">メールアドレス<span class="req">必須</span></label>
+        <input id="f-email" type="email" name="email" required placeholder="例：example@gmail.com">
+      </div>
+      <div class="field">
+        <label for="f-tel">電話番号<span class="opt">任意</span></label>
+        <input id="f-tel" type="tel" name="電話番号" placeholder="例：090-1234-5678">
+      </div>
+      <div class="field">
+        <label for="f-service">ご相談内容<span class="req">必須</span></label>
+        <select id="f-service" name="ご相談内容" required>
+          <option value="">選択してください</option>
+          <option>ハウスクリーニング</option>
+          <option>マンション共用部清掃</option>
+          <option>草刈り・庭作業</option>
+          <option>不用品回収・片付け</option>
+          <option>引越し手伝い・家具組立</option>
+          <option>遺品整理・生前整理</option>
+          <option>その他・まだ決まっていない</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-place">作業場所（市区町村まで）<span class="opt">任意</span></label>
+        <input id="f-place" type="text" name="作業場所" placeholder="例：神奈川県茅ヶ崎市">
+      </div>
+      <div class="field">
+        <label for="f-date">ご希望日<span class="opt">任意</span></label>
+        <input id="f-date" type="text" name="ご希望日" placeholder="例：12月中旬の土日">
+      </div>
+      <div class="field">
+        <label for="f-msg">お問い合わせ内容<span class="req">必須</span></label>
+        <textarea id="f-msg" name="お問い合わせ内容" rows="6" required placeholder="作業の内容や量、気になっていることなどをご記入ください"></textarea>
+      </div>
+      <button class="btn btn-green submit" type="submit">送信する</button>
+    </form>
+
+    <div class="contact-grid single">
       <a class="contact-card mail" href="mailto:clover.chigasaki@gmail.com?subject=無料見積もり依頼"><small>clover.chigasaki@gmail.com</small><span class="big">✉ メールで見積り依頼</span></a>
     </div>
     <p class="hours">受付時間 8:00〜20:00</p>
@@ -45,9 +100,9 @@
   <div class="container">
     <p class="eyebrow">無料見積り受付中</p>
     <h2>清掃・片付け・お困りごとはCloverへ</h2>
-    <p>LINE・メールでお気軽にご相談ください。</p>
+    <p>メールフォーム・メールでお気軽にご相談ください。</p>
     <div class="btn-row">
-      <a class="btn btn-line" href="https://lin.ee/Qf1n48V" target="_blank" rel="noopener">LINEで相談</a>
+      <a class="btn btn-white" href="contact.html#form">フォームで相談</a>
       <a class="btn btn-yellow" href="mailto:clover.chigasaki@gmail.com?subject=無料見積もり依頼">メールで見積依頼</a>
     </div>
   </div>
@@ -66,7 +121,7 @@
 
 <!-- スマホで画面下に固定表示されるボタン -->
 <div class="fixed">
-  <a class="line" href="https://lin.ee/Qf1n48V" target="_blank" rel="noopener">LINEで相談</a>
+  <a class="form" href="contact.html#form">✎ フォームで相談</a>
   <a href="mailto:clover.chigasaki@gmail.com?subject=無料見積もり依頼">✉ メール</a>
 </div>
 
